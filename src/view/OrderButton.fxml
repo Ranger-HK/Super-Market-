@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="614.0" prefWidth="770.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderButtonController">
+   <children>
+      <TableView fx:id="tblId" layoutX="19.0" layoutY="126.0" prefHeight="298.0" prefWidth="719.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="122.0" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="177.0" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="142.0" text="Quntity" />
+            <TableColumn fx:id="colTotal" prefWidth="145.0" text="Total" />
+            <TableColumn fx:id="colDiscount" prefWidth="132.0" text="Discount Price" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="13.0" onAction="#addCustomerOnAction" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 6;" text="Add Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="txtAddress" layoutX="576.0" layoutY="73.0" prefHeight="25.0" prefWidth="163.0" promptText="Address" />
+      <Label layoutX="26.0" layoutY="466.0" prefHeight="27.0" prefWidth="154.0" text="Total Amount">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="lblTotalAmount" layoutX="232.0" layoutY="460.0" prefHeight="25.0" prefWidth="163.0" />
+      <JFXTextField fx:id="txtName" layoutX="375.0" layoutY="73.0" onAction="#moveToAddress" prefHeight="25.0" prefWidth="163.0" promptText="Customer Name" />
+      <JFXTextField fx:id="txtTitle" layoutX="178.0" layoutY="73.0" onAction="#moveToCustomerName" prefHeight="25.0" prefWidth="163.0" promptText="Customer Title" />
+      <JFXComboBox fx:id="cmbCustomerId" layoutX="26.0" layoutY="74.0" prefHeight="25.0" prefWidth="127.0" promptText="Customer Id">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <Label layoutX="207.0" layoutY="461.0" prefHeight="34.0" prefWidth="12.0" text=":">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="498.0" prefHeight="27.0" prefWidth="154.0" text="Saved Amount">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="lblSavedAmount" layoutX="232.0" layoutY="492.0" prefHeight="25.0" prefWidth="163.0" />
+      <Label layoutX="207.0" layoutY="493.0" prefHeight="34.0" prefWidth="12.0" text=":">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="531.0" prefHeight="27.0" prefWidth="154.0" text="Amount Paid">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="lnlAmountPaid" layoutX="232.0" layoutY="525.0" onAction="#amountPaidOnAction" prefHeight="25.0" prefWidth="163.0" />
+      <Label layoutX="207.0" layoutY="526.0" prefHeight="34.0" prefWidth="12.0" text=":">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="564.0" prefHeight="27.0" prefWidth="163.0" text="Remaining Balance">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="lblRemainingBalance" layoutX="232.0" layoutY="558.0" prefHeight="25.0" prefWidth="163.0" />
+      <Label layoutX="207.0" layoutY="559.0" prefHeight="34.0" prefWidth="12.0" text=":">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="594.0" layoutY="554.0" onAction="#backToOnAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 6;" text="Cancle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnConformOrder" buttonType="RAISED" layoutX="556.0" layoutY="508.0" onAction="#conformOrderOnAction" prefHeight="34.0" prefWidth="178.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 6;" text="Conform Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="164.0" layoutY="17.0" prefHeight="27.0" prefWidth="48.0" text="Date  :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="226.0" layoutY="21.0" prefHeight="21.0" prefWidth="143.0" text="2021- August - 16 ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="385.0" layoutY="21.0" prefHeight="21.0" prefWidth="60.0" text="Time  : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="454.0" layoutY="21.0" prefHeight="21.0" prefWidth="95.0" text="00.00 am">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="21.0" prefHeight="21.0" prefWidth="78.0" text="Order Id : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="684.0" layoutY="21.0" prefHeight="21.0" prefWidth="72.0" text="O-001">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="552.0" layoutY="459.0" onAction="#refreshOnAction" prefHeight="27.0" prefWidth="186.0" style="-fx-background-color: #1E9600; -fx-background-radius: 12;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+   </children>
+</AnchorPane>

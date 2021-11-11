@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextSystemReport" prefHeight="615.0" prefWidth="1040.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SystemReportFormController">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="562.0" onAction="#backToAdminSelectForm" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 12; -fx-background-color: #9c88ff;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="73.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1019.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.31428571428571433" startY="0.6904761904761905">
+               <stops>
+                  <Stop color="#6dcfb8" />
+                  <Stop color="#6dcfb8" offset="0.007662835249042145" />
+                  <Stop color="#3c4e61" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="370.0" layoutY="19.0" prefHeight="51.0" prefWidth="301.0" text=" Green Super Market" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="35.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.95">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="859.0" layoutY="29.0" onAction="#backToSupermarketForm" prefHeight="45.0" prefWidth="151.0" style="-fx-background-radius: 12; -fx-background-color: #e74c3c;" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="866.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/exit.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="487.0" fitWidth="683.0" layoutX="196.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/financial_statement_analysis_powerpoint_presentation_slides_Slide63.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

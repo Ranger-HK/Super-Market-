@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextId" prefHeight="423.0" prefWidth="674.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierLoginController">
+   <children>
+      <ImageView fitHeight="90.0" fitWidth="95.0" layoutX="294.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/unauthorized-person.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="419.0" layoutY="356.0" onAction="#openOrderForm" prefHeight="42.0" prefWidth="192.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 12;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXPasswordField fx:id="passwordContext" labelFloat="true" layoutX="80.0" layoutY="253.0" prefHeight="32.0" prefWidth="531.0" promptText="Password">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXPasswordField>
+      <JFXTextField fx:id="userNameContext" focusColor="BLACK" labelFloat="true" layoutX="80.0" layoutY="180.0" onAction="#goToPassOnAction" prefHeight="32.0" prefWidth="531.0" promptText="UserName" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <JFXButton layoutX="80.0" layoutY="356.0" onAction="#backToSuperMarketForm" prefHeight="42.0" prefWidth="192.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 12;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Rectangle arcHeight="12.0" arcWidth="12.0" height="32.0" layoutX="8.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="657.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="24.0" layoutY="6.0" prefHeight="32.0" prefWidth="423.0" text="CASHIER LOGIN  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

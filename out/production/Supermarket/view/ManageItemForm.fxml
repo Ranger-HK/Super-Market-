@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextManageItem" prefHeight="615.0" prefWidth="1040.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemFormController">
+   <children>
+      <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="254.0" layoutY="110.0" onAction="#moveToPacketSize" prefHeight="25.0" prefWidth="141.0" promptText="Description" />
+      <JFXTextField fx:id="txtPacketSize" labelFloat="true" layoutX="477.0" layoutY="112.0" onAction="#moveToUnitPrice" prefHeight="25.0" prefWidth="141.0" promptText="Packet Size" />
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="690.0" layoutY="113.0" onAction="#moveToQtyOnHand" prefHeight="25.0" prefWidth="141.0" promptText="Unit Price" />
+      <JFXButton fx:id="updateBtn" buttonType="RAISED" layoutX="493.0" layoutY="176.0" onAction="#editOnAction" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 6; -fx-background-color: #00b894;" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="568.0" onAction="#backToSelectFormAdmin" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 12; -fx-background-color: #9c88ff;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtItemCode" labelFloat="true" layoutX="39.0" layoutY="109.0" onAction="#moveToDescription" prefHeight="25.0" prefWidth="141.0" promptText="Itme Code" />
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="873.0" layoutY="115.0" onAction="#moveToDiscount" prefHeight="25.0" prefWidth="141.0" promptText="Qty On Hand" />
+      <JFXButton fx:id="addItemBtn" buttonType="RAISED" layoutX="881.0" layoutY="177.0" onAction="#addItemOnAction" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 6; -fx-background-color: #00b894;" text="Add Item" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="690.0" layoutY="176.0" onAction="#clearFiledOnAction" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 6; -fx-background-color: #00b894;" text="Clear Filed" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblBox" layoutX="15.0" layoutY="227.0" onMouseClicked="#handleMouseOnAction" prefHeight="330.0" prefWidth="1012.0">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="150.0" text="Item Code" />
+            <TableColumn fx:id="colDescription" minWidth="9.0" prefWidth="204.0" text="Description" />
+            <TableColumn fx:id="colPacketSize" minWidth="9.0" prefWidth="184.0" text="Packet Size" />
+            <TableColumn fx:id="colUnitPrice" minWidth="9.0" prefWidth="186.0" text="Unit Price" />
+            <TableColumn fx:id="colQtyOnHand" minWidth="9.0" prefWidth="159.0" text="Qty On Hand" />
+            <TableColumn fx:id="colDiscount" minWidth="9.0" prefWidth="126.0" text="Discount" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="deleteItemBtn" buttonType="RAISED" layoutX="895.0" layoutY="568.0" onAction="#deleteOnAction" prefHeight="39.0" prefWidth="125.0" style="-fx-background-radius: 12; -fx-background-color: #eb2f06;" text="Delete Item" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="68.0" layoutX="9.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1019.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.31428571428571433" startY="0.6904761904761905">
+               <stops>
+                  <Stop color="#6dcfb8" />
+                  <Stop color="#6dcfb8" offset="0.007662835249042145" />
+                  <Stop color="#3d4f63" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="370.0" layoutY="19.0" prefHeight="51.0" prefWidth="301.0" text=" Green Super Market" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="35.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.95">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="866.0" layoutY="18.0" onAction="#backToAdmin" prefHeight="51.0" prefWidth="141.0" style="-fx-background-radius: 12; -fx-background-color: #e74c3c;" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="873.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/exit.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtDiscount" labelFloat="true" layoutX="254.0" layoutY="152.0" prefHeight="25.0" prefWidth="141.0" promptText="Discount" />
+   </children>
+</AnchorPane>

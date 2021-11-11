@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextManage" prefHeight="615.0" prefWidth="1040.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerOrderController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="852.0" layoutY="530.0" onAction="#backOnAction" prefHeight="37.0" prefWidth="152.0" ripplerFill="#f50707" style="-fx-background-color: #e74c3c; -fx-background-radius: 6;" text="Cancel" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField labelFloat="true" layoutX="326.0" layoutY="36.0" prefHeight="25.0" prefWidth="288.0" promptText="Search Order">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <TableView layoutX="67.0" layoutY="123.0" prefHeight="296.0" prefWidth="906.0">
+        <columns>
+          <TableColumn prefWidth="153.0" text="Item Code" />
+          <TableColumn prefWidth="196.0" text="Description" />
+            <TableColumn prefWidth="177.0" text="Qty" />
+            <TableColumn fx:id="colDiscount" prefWidth="196.0" text="Discount" />
+            <TableColumn prefWidth="183.0" text="Net Total" />
+        </columns>
+      </TableView>
+      <JFXTextField labelFloat="true" layoutX="123.0" layoutY="443.0" prefHeight="25.0" prefWidth="167.0" promptText="Item Code">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="363.0" layoutY="443.0" prefHeight="25.0" prefWidth="167.0" promptText="Description">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="597.0" layoutY="443.0" prefHeight="25.0" prefWidth="167.0" promptText="Qty">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="123.0" layoutY="526.0" prefHeight="25.0" prefWidth="167.0" promptText="Discount">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField labelFloat="true" layoutX="363.0" layoutY="526.0" prefHeight="25.0" prefWidth="167.0" promptText="Net Total">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="647.0" layoutY="33.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #9c88ff;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="852.0" layoutY="451.0" prefHeight="37.0" prefWidth="152.0" style="-fx-background-color: #00b894; -fx-background-radius: 6;" text="Confrim Edit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="911.0" layoutY="38.0" prefHeight="21.0" prefWidth="87.0" text="CID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="90.0" layoutY="78.0" prefHeight="37.0" prefWidth="850.0" />
+      <Separator layoutX="819.0" layoutY="440.0" orientation="VERTICAL" prefHeight="158.0" prefWidth="12.0" />
+      <JFXComboBox labelFloat="true" layoutX="37.0" layoutY="36.0" prefHeight="25.0" prefWidth="129.0" promptText="Order Id">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+   </children>
+</AnchorPane>

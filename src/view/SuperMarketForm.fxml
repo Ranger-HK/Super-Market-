@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="txtId" prefHeight="615.0" prefWidth="1040.0" style="-fx-background-color: #43C6AC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SuperMarketFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f6ee" height="277.0" layoutX="-19.0" layoutY="157.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1060.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#f8f6ee" height="413.0" layoutX="693.0" layoutY="125.0" stroke="#b5b5b5" strokeLineCap="BUTT" strokeType="OUTSIDE" width="308.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="415.0" fitWidth="304.0" layoutX="695.0" layoutY="125.0" opacity="0.36" pickOnBounds="true">
+         <image>
+            <Image url="@../Assets/3514981.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="740.0" layoutY="203.0" onAction="#openAdminOnAction" prefHeight="55.0" prefWidth="214.0" style="-fx-background-radius: 12; -fx-background-color: #1abc9c;" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="740.0" layoutY="377.0" onAction="#openCashierOnAction" prefHeight="55.0" prefWidth="214.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 12;" text="Cashier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <Label layoutX="35.0" layoutY="173.0" prefHeight="85.0" prefWidth="485.0" text="W E L C O M E  T O">
+         <font>
+            <Font name="Bauhaus 93" size="58.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <ImageView fitHeight="85.0" fitWidth="84.0" layoutX="302.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/tea-leaf.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="161.0" layoutY="261.0" prefHeight="68.0" prefWidth="141.0" text="Green" textFill="#36eb54">
+         <font>
+            <Font name="Bernard MT Condensed" size="56.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Label layoutX="331.0" layoutY="328.0" prefHeight="66.0" prefWidth="275.0" text="Supermarket" textFill="#90d938">
+         <font>
+            <Font name="Arial Narrow Italic" size="56.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="473.0" prefHeight="34.0" prefWidth="378.0" text="&quot;FRESH IDEAS EVERYDAY&quot;" textFill="#ffea98">
+         <font>
+            <Font name="Times New Roman Italic" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fitHeight="94.0" fitWidth="111.0" layoutX="454.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/a.png" />
+         </image>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="38.0" layoutX="756.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/unauthorized-person.png" />
+         </image>
+         <effect>
+            <SepiaTone>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </SepiaTone>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="756.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/cash-register.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
